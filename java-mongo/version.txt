@@ -1,0 +1,26 @@
+20160531
+增加了通过query对象删除数据。
+
+20150826
+fixed bug in MongoDaoImpl.java .
+
+20150713
+fixed bug in MongoDaoImpl.java .
+
+20140318
+spring-mongo.xml  add aliases 
+
+20131230
+fixed bugs in FileServiceImpl.java on version 3.0.0
+
+20131229
+fix IFileService Validate and mongoDB log etc. bugs on version 3.0.0 .
+
+20131213
+Raise FileService to version 3.0.0 .
+
+20131014 
+add log4j mongoDB
+
+20131127
+add mongoDB multiDatasource   

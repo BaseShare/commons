@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+    
+    <alias name="fileService" alias="com.ctfo.file.boss.IFileService" />
+	<alias name="clobService" alias="com.ctfo.file.boss.IClobService" />
+	<alias name="mongoService" alias="com.ctfo.file.boss.IMongoService" />
+	
+	<bean id="fileService" class="com.ctfo.file.boss.impl.FileServiceImpl" scope="prototype">
+		<property name="fileDao" ref="fileDao"></property>
+		<property name="mongoDao" ref="mongoDao"></property>
+	</bean>
+	
+	<bean id="clobService" class="com.ctfo.file.boss.impl.ClobServiceImpl" scope="prototype">
+		<property name="mongoDao" ref="mongoDao"></property>
+	</bean>
+	
+	<bean id="mongoService" class="com.ctfo.file.boss.impl.MongoServiceImpl" scope="prototype">
+		<property name="mongoDao" ref="mongoDao"></property>
+	</bean>
+	
+	<bean id="fileDao" class="com.ctfo.file.dao.impl.FileDaoImpl" scope="prototype" />
+	<bean id="mongoDao" class="com.ctfo.file.dao.impl.MongoDaoImpl" scope="prototype" />
+
+</beans>

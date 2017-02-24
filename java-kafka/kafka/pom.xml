@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sinoiov.yyzc.commons</groupId>
+		<artifactId>yyzc-commons</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.sinoiov.yyzc.commons</groupId>
+	<artifactId>yyzc-kafka</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>yyzc-kafka</name>
+	<description>运营支撑通用MongoDB的ORM服务</description>
+
+	<modules>
+		<module>yyzc-kafka-support</module>
+		<module>yyzc-kafka-producer-test</module>
+		<module>yyzc-kafka-consumer-test</module>
+	</modules>
+</project>
